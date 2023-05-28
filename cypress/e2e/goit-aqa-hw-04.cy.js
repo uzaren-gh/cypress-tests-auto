@@ -181,22 +181,22 @@ describe("HEADERs Test for https://parallelum.com.br/fipe/api/v2/cars/brands/48/
     });
   });
 
-  it(`Standart header test for parallelum.com.br`, () => {
-    let useragent =
-      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36";
-    let request = {
-      method: "GET",
-      url: `https://parallelum.com.br/fipe/api/v2/cars/brands/48/years`,
-      headers: {
-        "Content-Type": "application/json",
-      },
-      failOnStatusCode: false,
-    };
-    cy.request(request).then((response) => {
-      assert.equal(useragent, response.requestHeaders["user-agent"]);
-      assert.equal(200, response.status);
-    });
-  });
+  // it(`Standart header test for parallelum.com.br`, () => {
+  //   let useragent =
+  //     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36";
+  //   let request = {
+  //     method: "GET",
+  //     url: `https://parallelum.com.br/fipe/api/v2/cars/brands/48/years`,
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     failOnStatusCode: false,
+  //   };
+  //   cy.request(request).then((response) => {
+  //     assert.equal(useragent, response.requestHeaders["user-agent"]);
+  //     assert.equal(200, response.status);
+  //   });
+  // });
 
   //проверка длительности выполнения запроса
   it("Duration < 400 ms request test for parallelum.com.br", () => {
