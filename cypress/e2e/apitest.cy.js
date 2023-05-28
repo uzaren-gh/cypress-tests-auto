@@ -39,7 +39,7 @@ describe("https://api.mail.gw/domains", () => {
     cy.request(request).then((response) => {
       const status = response.status;
       assert.equal(200, status);
-      // console.log(response.body);
+      console.log(response.body);
 
       domains = response.body["hydra:member"].map((element) => element.domain);
       console.log("domains:", domains);
